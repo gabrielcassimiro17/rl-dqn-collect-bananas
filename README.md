@@ -15,9 +15,19 @@ The task is episodic, and in order to solve the environment, the agent must get 
 
 # Usage
 
+## Installing the environment
+
+To install the env, select the environment that matches your operating system:
+
+- [Linux](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
+- [Mac OSX](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
+- [Windows (32-bit)](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
+- [Windows (64-bit)](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
+
+The Github Repo already contains the environment for MacOS. If you are using another OS, you must download the environment and place it in the folder `rl-dqn-collect-bananas/`.
+
 ## Training
 To train the agent you must open the notebook `Navigation.ipynb` and run all the cells. The agent will be trained and the weights will be saved in the file `model.pth`.
-
 
 
 ## Visualizing trained agent
