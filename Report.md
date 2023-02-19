@@ -31,7 +31,7 @@ Correlated targets refer to a situation where the target values used to update t
 ## Neural network architecture
 The neural network architecture used in the algorithm is a simple fully connected neural network with 2 hidden layers. The input layer has 37 neurons, the output layer has 4 neurons and the hidden layers have 64 neurons each. The activation function used in the hidden layers is ReLU and the activation function used in the output layer is the identity function.
 
-The optimizer used for this implementation is Adam with a learning rate of **FILLHERE** and a discount factor of **FILLHERE**.
+The optimizer used for this implementation is Adam with a learning rate of 0.0005.
 
 The library used to implement the neural network was PyTorch.
 
@@ -71,12 +71,23 @@ class DQNetwork(nn.Module):
 
 ## Training task
 
-To train the agent we used a loop to interact with the environment, collect and learn from the experiences. One of the hyperparameters used in the training task was the number of episodes. This first hyperparameter was tuned manually trying to optimize the training time and the performance of the agent. The number of episodes used in the final implementation was **FILLHERE**.
+To train the agent we used a loop to interact with the environment, collect and learn from the experiences. One of the hyperparameters used in the training task was the number of episodes. This first hyperparameter was tuned manually trying to optimize the training time and the performance of the agent. The number of episodes used in the final implementation was 1200 however the env was solved in 775.
 
-The second hyperparameter used in the training task was the number of steps per episode. This hyperparameter was also tuned manually trying to optimize the training time and the performance of the agent. The bigger the number of steps the more the agent can explore the environment but it increases a lot the training time. The number of steps per episode used in the final implementation was **FILLHERE**.
+The second hyperparameter used in the training task was the number of steps per episode. This hyperparameter was also tuned manually trying to optimize the training time and the performance of the agent. The bigger the number of steps the more the agent can explore the environment but it increases a lot the training time. The number of steps per episode used in the final implementation was 1000.
 
+Some other hyperparameters used:
 
+- Replay buffer size: 1000
+- Batch size: 32
+- Update every: 4
+- Gamma: 0.99
+- Tau: 1e-3
+- Learning rate: 0.0005
 
+**Plot of rewards per episode:**
+![](training_best.png)
+
+Here we can see the rewards increase as the agent improves. The tradeoff bewtween exploration and exploitation is also visible in the plot, where the agent explores more in the fist 200 episodes and then starts to exploit the environment and get higer rewards.
 
 ## Future improvements
 The algorithm can be improved by using the following techniques:
