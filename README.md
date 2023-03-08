@@ -1,5 +1,7 @@
 # rl-dqn-collect-bananas
-Repository for the Udacity RL Specialization first project with Deep Q Learning
+Repository for the Udacity RL Specialization first project with Deep Q Learning.
+
+[Medium post](https://medium.com/towards-data-science/solving-unity-environment-with-deep-reinforcement-learning-836dc181ee3b)
 
 # Project overview
 This project has the objective to train an Agent using Deep Q Networks.
